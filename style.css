@@ -1,0 +1,197 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #006b7a, #176273, #23596b, #2b5062, #2f4858);
+    font-family: 'Rubik';
+}
+
+.ribbon {
+    position: absolute;
+    display: block;
+    top: -5px;
+    right: -5px;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.ribbon .label {
+    position: relative;
+    display: block;
+    left: -10px;
+    top: 23px;
+    width: 158px;
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    background-color: #669b90;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    transform: rotate(45deg) translate3d(0, 0, 0);
+}
+
+.label:before, .label:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    border-top: 4px solid #006b5e;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.label:before {
+    left: 0;
+}
+
+.label:after {
+    right: 0;
+}
+
+span {
+    display: block;
+    font-size: 35px;
+    color: black;
+}
+
+
+.ticket-in.active {
+    left: calc(50% - 585px);
+    transition: left 1.5s;
+}
+
+.content {
+    height: 260px;
+    margin: 8px;
+    border: 2px dashed #1e1e1e;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.content h1 {
+    font-size: 29px;
+    color: #4c483b;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.content span {
+    text-align: center;
+    color: #1e1e1e;
+    font-size: 22px;
+    font-family: cursive;
+    margin-top: -2px;
+}
+
+.coupon-container {
+    position: relative;
+}
+
+.ticket-in {
+    width: 450px;
+    height: 280px;
+    position: absolute;
+    background: #FDDB3A;
+    top: 10px;
+    left: calc(50% - 280px);
+    z-index: -1;
+    transition: left 2s;
+    border-radius: 10px;
+}
+
+.coupon-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    border: 1px solid #1e1e1e;
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 450px;
+    height: 300px;
+    background: #F4F4F4;
+    text-align: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.button {
+    display: block;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    padding: 0;
+    line-height: 58px;
+    text-align: center;
+    border-radius: 0 0 4px 4px;
+    background-color: #008f85;
+    margin-top: auto;
+    border-top: 5px double white;
+}
+
+.coupon-header img {
+    display: block;
+    margin-top: 10px;
+}
+
+.ticket-in .ring {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(1px 1px 3px #1e1e1e);
+    animation: ring 2s ease-in-out infinite;
+}
+
+.datas {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 90px;
+    margin-top: 20px;
+}
+
+span.small {
+    font-size: 25px;
+}
+
+span.smallest {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@keyframes ring {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
